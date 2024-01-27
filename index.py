@@ -25,7 +25,7 @@ async def process_text_message(update: Update, context: ContextTypes.DEFAULT_TYP
     yagpt_temperature = 0.01
     yagpt_max_tokens = 8000
     yagpt_prompt = "Отвечай на вопросы коротко и точно. Следуй пожеланиям пользователя, до тех пор пока они не выходят за рамки этики. Если не знаешь ответ, вежливо напиши об этом."
-    llm = YandexLLM(api_key=yagpt_api_key, folder_id=yagpt_folder_id, temperature = yagpt_temperature, max_tokens=yagpt_max_tokens, use_lite=False)        
+    llm = YandexLLM(api_key=yagpt_api_key, folder_id=yagpt_folder_id, temperature = yagpt_temperature, max_tokens=yagpt_max_tokens, use_lite=True)        
     str2 = """Вопрос: {question}
     Твой ответ:"
     """
